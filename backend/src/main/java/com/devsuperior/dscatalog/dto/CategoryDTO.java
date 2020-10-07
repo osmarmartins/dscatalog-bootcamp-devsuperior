@@ -7,16 +7,16 @@ import com.devsuperior.dscatalog.entities.Category;
 public class CategoryDTO implements Serializable {
 
 	private static final long serialVersionUID = 430125095807381901L;
-	
+
 	private Long id;
-	private String descricao;
+	private String name;
 
 	public CategoryDTO() {
 	}
-	
+
 	public CategoryDTO(Category entity) {
 		this.id = entity.getId();
-		this.descricao = entity.getDescricao();
+		this.name = entity.getName();
 	}
 
 	public Long getId() {
@@ -27,16 +27,12 @@ public class CategoryDTO implements Serializable {
 		this.id = id;
 	}
 
-	public String getDescricao() {
-		return descricao;
+	public String getName() {
+		return name;
 	}
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-	
 }

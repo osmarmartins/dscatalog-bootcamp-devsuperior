@@ -21,4 +21,9 @@ public class CategoryService {
 		return list.stream().map( x -> new CategoryDTO(x)).collect(Collectors.toList());
 	}
 
+	public CategoryDTO findById(Long id) {
+		Category category = repository.findById(id).get();
+		return new CategoryDTO(category);
+	}
+
 }
